@@ -50,7 +50,7 @@ def handle_login():
         return jsonify("User Not Found :/"), 400
     
 
-@api.route('/user', methods=['GET'])
+@api.route('/private', methods=['GET'])
 @jwt_required()
 def handle_get_user():
     user_email = get_jwt_identity()
